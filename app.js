@@ -14,7 +14,7 @@ app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
-
+// Mongoose config
 mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGODB_URL, (err) => {
     if (!err) {
